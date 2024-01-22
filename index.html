@@ -1,27 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Hockey</title>
 
- <!-- tailwind and daisy ui link -->
-    
+    <!-- tailwind and daisy ui link -->
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-      <!-- google font -->
+    <!-- google font -->
 
-      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-      <script src="https://cdn.tailwindcss.com"></script>
-      <!--  styles -->
-      <style>
-         .font-Manrope {
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind custom classes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'button-primary': '#FF4240;',
+                        'button-primary-bg': 'rgba(231, 111, 81, 0.10);',
+
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <!--  styles -->
+    <style>
+        .font-manrope {
             font-family: 'Manrope', sans-serif;
         }
-      </style>
+    </style>
 </head>
-<body>
-    
+
+<body class="font-manrope ">
+    <header>
+        <nav class="container mx-auto lg:px-20">
+            <div class="navbar bg-base-100">
+                <div class="flex-1">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52 ">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Page</a></li>
+                            <li><a>Blog</a></li>
+                            <li><a>contact</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-4xl ">Hockey<span class="text-button-primary">’</span>s
+                    </a>
+                </div>
+                <div class="navbar-center hidden lg:flex ">
+                    <ul class="menu  text-base menu-horizontal px-1">
+                        <li><a class="text-button-primary">Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Page</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <img class="pr-4" src="Images/search.png" alt="">
+                    <a class="btn bg-button-primary text-white">LOGIN</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- banner-section -->
+        <section class="container mx-auto lg:px-20 px-4 mt-14">
+            <div class="carousel lg:w-full lg:h-[550px] rounded-2xl">
+                <!-- slider-1  -->
+                <div id="slide1" class="carousel-item relative  w-full">
+                    <img c src="Images/banner/banner 1.png" class="w-full" />
+                    <div
+                        class="absolute lg:bottom-0 bottom-0 right-[172px] left-[176px] lg:space-x-4 space-x-2 transform  lg:-translate-y-1/2 lg:right-6 lg:left-6 ">
+                        <a href="#slide4" class="btn bg-black text-white btn-circle">❮</a>
+                        <a href="#slide2" class="btn  bg-black text-white btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- slider2 -->
+                <div id="slide2" class="carousel-item relative  w-full">
+                    <img c src="Images/banner/banner 2.jpg" class="w-full" />
+                    <div
+                        class="absolute lg:bottom-0 bottom-0 right-[172px] left-[176px] lg:space-x-4 space-x-2 transform  lg:-translate-y-1/2 lg:right-6 lg:left-6 ">
+                        <a href="#slide1" class="btn bg-black text-white btn-circle">❮</a>
+                        <a href="#slide3" class="btn  bg-black text-white btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- slider3 -->
+                <div id="slide3" class="carousel-item relative  w-full">
+                    <img c src="Images/banner/banner 3.jpg" class="w-full" />
+                    <div
+                        class="absolute lg:bottom-0 bottom-0 right-[172px] left-[176px] lg:space-x-4 space-x-2 transform  lg:-translate-y-1/2 lg:right-6 lg:left-6 ">
+                        <a href="#slide2" class="btn bg-black text-white btn-circle">❮</a>
+                        <a href="#slide4" class="btn  bg-black text-white btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- slide4 -->
+                <div id="slide4" class="carousel-item relative  w-full">
+                    <img c src="Images/banner/banner 4.jpg" class="w-full" />
+                    <div
+                        class="absolute lg:bottom-0 bottom-0 right-[172px] left-[176px] lg:space-x-4 space-x-2 transform  lg:-translate-y-1/2 lg:right-6 lg:left-6 ">
+                        <a href="#slide3" class="btn bg-black text-white btn-circle">❮</a>
+                        <a href="#slide1" class="btn  bg-black text-white btn-circle">❯</a>
+                    </div>
+                </div>
+
+            </div>
+            <div
+                class="lg:w-[650px] lg:h-40 bg-[#131318;] lg:absolute p-8 rounded-2xl my-4 h-40 lg:-translate-y-52 lg:translate-x-[690px] ">
+                <h2 class="text-white text-xl font-semibold mb-3">Meet all the heroes from the field</h2>
+                <p class="text-white">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat
+                    dolor. Purus urna in sit nullam proin. </p>
+            </div>
+
+
+        </section>
+
+        <!-- Professional Hockeys section -->
+       
+
+    </main>
 </body>
+
 </html>
